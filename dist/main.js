@@ -19,12 +19,12 @@ function fetchAndRenderPosts() {
             // Parse the response JSON
             const posts = yield response.json();
             // Iterate over the posts and render them as DOM nodes
-            const postsContainer = document.getElementById('posts-container'); // Assuming there is an HTML element with the id 'posts-container'
+            const postsContainer = document.getElementById('posts-container');
             let postSequenceNum = 1;
             if (postsContainer) {
                 posts.forEach(post => {
                     const postNode = document.createElement('div');
-                    postNode.classList.add('post'); // You can add CSS styles or classes as needed
+                    postNode.classList.add('post');
                     const titleNode = document.createElement('h2');
                     titleNode.textContent = post.title;
                     const bodyNode = document.createElement('p');
